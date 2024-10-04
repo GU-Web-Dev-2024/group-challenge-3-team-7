@@ -145,11 +145,20 @@
         function endGame() {
             // Algorithm:
             // 1. Stop the mole movement and countdown timers using clearInterval().
+            clearInterval(gameTimer);
+            clearInterval(moleTimer);
 
-            // 2. Hide any remaining mole on the grid.            /
+            // 2. Hide any remaining mole on the grid.
+            if (currentHole) {
+                currentHole.querySelector('.mole').style.display = 'none';
+            }
+
             // 3. Display an alert or message showing the final score.
-            // 4. Reset the game to allow playing again.
+            alert(`The final score is ${score}`);
 
+            // 4. Reset the game to allow playing again.
+            scoreBoard.textContent = `Score: 0`;
+            timerDisplay.textContent = `Time Left: 30s`;
 
         }
 
