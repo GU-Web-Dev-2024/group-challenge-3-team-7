@@ -140,6 +140,13 @@
             //      hint: you need to then find all "mole holes" and randomly choose one from the list.
             // 3. Show the mole in the new hole.
             // 4. Add a click event listener to the mole to handle "whacking".
+            const currentMole = document.querySelectore('.mole');
+            if (currentMole) {
+                currentMole.classList.remove('mole');
+            }
+
+            const holes = document.querySelectorAll('.hole');
+            const randomIndex = Math.floor(Math.random() * holes.length);
         }
 
         // TODO: whack mole game logic
