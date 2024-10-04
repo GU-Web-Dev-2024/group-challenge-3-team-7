@@ -103,44 +103,54 @@
         // Example:
         // const startButton = document.getElementById('startButton');
 
-        // Add event listener to the start button        
+        // Add event listener to the start button
 
         // TODO: start game logic
         function startGame() {
             // Algorithm:
-            // 1. Reset game variables: score starts at 0, timer starts at max, mole visibility, etc.          
-            // 2. Update JS variables and HTML elements to reflect this.            
+            // 1. Reset game variables: score starts at 0, timer starts at max, mole visibility, etc.
+            score = 0;
+            timeLeft = 30;
+            // 2. Update JS variables and HTML elements to reflect this.
             // 3. Start the mole movement interval using setInterval().
             //    e.g., - gameTimer = setInterval(randomHole, 1000); // Move mole every second
-            // 4. Start the countdown timer using setInterval().            
+            // 4. Start the countdown timer using setInterval().
+
+            scoreBoard.textContent = `Score: ${score}`;
+            timerDisplay.textContent = `Time Left: ${timeLeft}s`;
+            moleTimer = setInterval(randomHole, 1000);
+            gameTimer = setInterval(countdown, 1000);
         }
 
         // TODO: mole movement logic
         function randomHole() {
             // Algorithm:
-            // 1. Hide the mole in the previous hole (if any).           
-            // 2. Generate a random index to select a new hole. 
-            //      hint: you need to then find all "mole holes" and randomly choose one from the list.           
-            // 3. Show the mole in the new hole.            
-            // 4. Add a click event listener to the mole to handle "whacking".            
+            // 1. Hide the mole in the previous hole (if any).
+            // 2. Generate a random index to select a new hole.
+            //      hint: you need to then find all "mole holes" and randomly choose one from the list.
+            // 3. Show the mole in the new hole.
+            // 4. Add a click event listener to the mole to handle "whacking".
         }
 
         // TODO: whack mole game logic
         function whack() {
             // Algorithm:
             // 0. if the mole is visible...
-            // 1. Increase the score.           
-            // 2. Update the score display in the HTML.           
-            // 3. Hide the mole after it's whacked.            
+            // 1. Increase the score.
+            // 2. Update the score display in the HTML.
+            // 3. Hide the mole after it's whacked.
         }
 
         // TODO: end game logic function
         function endGame() {
             // Algorithm:
-            // 1. Stop the mole movement and countdown timers using clearInterval().            
+            // 1. Stop the mole movement and countdown timers using clearInterval().
+
             // 2. Hide any remaining mole on the grid.            /
-            // 3. Display an alert or message showing the final score.            
+            // 3. Display an alert or message showing the final score.
             // 4. Reset the game to allow playing again.
+
+
         }
 
         // Helpful Tips:
