@@ -142,12 +142,19 @@
             // 4. Add a click event listener to the mole to handle "whacking".
             const currentMole = document.querySelectore('.mole');
             if (currentMole) {
-                currentMole.classList.remove('mole');
+                currentMole.querySelector('mole').style.display = 'none';
             }
 
             const holes = document.querySelectorAll('.hole');
             const randomIndex = Math.floor(Math.random() * holes.length);
+        
+            currentHole = holes[randomIndex];
+            const mole = currentHole.querySelector('.mole');
+
+            mole.style.display = 'block';
+            mole.onclick = whack; // Add click event listener to the mole
         }
+        
 
         // TODO: whack mole game logic
         function whack() {
@@ -162,6 +169,7 @@
 
                 // 2. Hide the mole after it's whacked
                 this.style.display = 'none';
+            }
         }
 
             // TODO: countdown timer logic
@@ -210,3 +218,4 @@
 </body>
 
 </html>
+
