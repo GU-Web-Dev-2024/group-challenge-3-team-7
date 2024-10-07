@@ -147,14 +147,16 @@
 
             const holes = document.querySelectorAll('.hole');
             const randomIndex = Math.floor(Math.random() * holes.length);
-        
+
             currentHole = holes[randomIndex];
             const mole = currentHole.querySelector('.mole');
 
             mole.style.display = 'block';
-            mole.onclick = whack; // Add click event listener to the mole
+            // Add click event listener to the mole
+            mole.addEventListener('click', whack);
+
         }
-        
+
 
         // TODO: whack mole game logic
         function whack() {
