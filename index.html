@@ -104,7 +104,7 @@
         // const startButton = document.getElementById('startButton');
 
         // Add event listener to the start button
-                let score = 0;
+            let score = 0;
             let timeLeft = 30;
             let currentHole = null;
             let moleTimer, gameTimer;
@@ -173,16 +173,16 @@
         }
 
             // TODO: countdown timer logic
-    function countdown() {
-        // Decrease the time left and update the timer display
-        timeLeft--;
-        timerDisplay.textContent = `Time Left: ${timeLeft}s`;
+        function countdown() {
+            // Decrease the time left and update the timer display
+            timeLeft--;
+            timerDisplay.textContent = `Time Left: ${timeLeft}s`;
 
-        // If time is up, end the game
-        if (timeLeft <= 0) {
-            endGame();
+            // If time is up, end the game
+            if (timeLeft <= 0) {
+                endGame();
+            }
         }
-    }
 
         // TODO: end game logic function
         function endGame() {
