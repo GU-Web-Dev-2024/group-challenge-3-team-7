@@ -96,6 +96,15 @@
     </div>
 
     <script>
+
+
+        // Task 1: Center the Button
+        $("#startButton").css({
+            display: "block",
+            margin: "0 auto"
+        });
+
+
         // Set up local variables
         // Hint: Declare variables for score, currentHole, gameTimer, timeLeft, moleVisible, etc.
 
@@ -116,6 +125,7 @@
             const holes = document.querySelectorAll('.hole'); // Select all hole elements
 
             startButton.addEventListener('click', startGame);
+
         // TODO: start game logic
         function startGame() {
             // Algorithm:
